@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title>Available Project</ion-title>
+      <ion-buttons end>
+      <button ion-button icon-only (click)="addnew()" title="Add new project">
+        <ion-icon name="add"></ion-icon>
+      </button>
+        <button ion-button icon-only (click)="delAll()" title="Delete all Project">
+          <ion-icon name="ios-trash-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="logo">
+    <img src="assets/img/appicon.svg" alt="Ionic logo">
+  </div>
+    <ion-list>
+    <p *ngFor="let item of items" >
+      <ion-item><ion-icon name="star"></ion-icon> {{item}}</ion-item>
+    </p>
+  </ion-list>
+</ion-content>

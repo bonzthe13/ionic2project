@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="about-header">
+    <img src="assets/img/ionic-logo-white.svg" alt="ionic logo">
+  </div>
+  <div padding class="about-info">
+    <h4>Ionic Conference</h4>
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" max="2056" [(ngModel)]="conferenceDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <ion-label>Location</ion-label>
+        <ion-select>
+          <ion-option value="madison" selected>Madison, WI</ion-option>
+          <ion-option value="austin">Austin, TX</ion-option>
+          <ion-option value="chicago">Chicago, IL</ion-option>
+          <ion-option value="seattle">Seattle, WA</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <p ion-text>
+      The technical exam using cross platform on Ionic 2 and Angular 2 and in typescripting and this is for mobile application.
+      The demoproject is all about creating simple user log in using email as username and has a password. and the objectives of
+      the project is to validate the simple entries and it will be first loaded
+      when the application run. the validation is made using method as a service function to control whole the validation process.
+      next the application also has a capable of creating simple project name entry using local storage and has capability
+      of checking the existing project name and has a listing of all existing project. when the user login validation is
+      successfull the all project listing is displayed using ionic listing method.
+    </p>
+  </div>
+</ion-content>
